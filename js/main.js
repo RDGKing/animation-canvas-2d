@@ -109,6 +109,8 @@ for (let i = 0; i < 10; i++) {
     let randomR = Math.floor(Math.random() * 100 + 20); // Radio aleatorio del círculo
     let randomS = Math.floor(Math.random() * 10 + 1); // Velocidad aleatoria del círculo
 
+
+    
     // Crea un nuevo círculo con los valores aleatorios generados
     let miCirculo = new Circle(randomX, randomY, randomR, 'black', (i + 1), randomS);
     // Agrega el círculo al arreglo
