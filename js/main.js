@@ -10,9 +10,6 @@ const window_width = window.innerWidth;
 canvas.height = window_height;
 canvas.width = window_width;
 
-// Color de fondo del canvas
-canvas.style.background = 'rgb(220,150,80)';
-
 // Función para generar colores RGB aleatorios
 function generarColorRGB() {
     // Se genera un valor aleatorio para cada componente de color (rojo, verde, azul)
@@ -23,6 +20,10 @@ function generarColorRGB() {
     var color_rgb = 'rgb(' + r + ',' + g + ',' + b + ')';
     return color_rgb;
 }
+// Color de fondo del canvas
+canvas.style.background = generarColorRGB();
+
+
 
 // Definición de la clase Circle
 class Circle {
@@ -104,13 +105,11 @@ let arrayCircle = [];
 // Creación de 10 círculos aleatorios y almacenamiento en el arreglo
 for (let i = 0; i < 10; i++) {
     // Genera valores aleatorios para la posición, radio y velocidad de cada círculo
-    let randomX = Math.random() * window_width; // Posición x aleatoria del círculo
-    let randomY = Math.random() * window_height; // Posición y aleatoria del círculo
     let randomR = Math.floor(Math.random() * 100 + 20); // Radio aleatorio del círculo
+    let randomX = Math.random() * (window_width - randomR * 2) + randomR; // Posición x aleatoria del círculo
+    let randomY = Math.random() * (window_height - randomR * 2) + randomR; // Posición y aleatoria del círculo
     let randomS = Math.floor(Math.random() * 10 + 1); // Velocidad aleatoria del círculo
 
-
-    
     // Crea un nuevo círculo con los valores aleatorios generados
     let miCirculo = new Circle(randomX, randomY, randomR, 'black', (i + 1), randomS);
     // Agrega el círculo al arreglo
