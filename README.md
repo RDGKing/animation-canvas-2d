@@ -1,0 +1,1 @@
+Este proyecto utiliza la API Canvas en JavaScript para crear y dibujar círculos en un canvas adaptado al tamaño de la pantalla. Cada circulo tiene movimiento que al tocar el borde de la pantalla rebota y cambia de color contorno.
